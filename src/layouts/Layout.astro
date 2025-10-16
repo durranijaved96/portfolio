@@ -1,9 +1,7 @@
 ---
 import Header from "@components/Header.astro";
-import "@fontsource/be-vietnam-pro";
-import "@fontsource-variable/gabarito";
-import { SITE_CONFIG } from "@config";
 import Footer from "@components/Footer.astro";
+import { SITE_CONFIG } from "@config";
 
 const {
   title,
@@ -21,7 +19,7 @@ const ogImgUrl = canonicalURL + socialImage;
 ---
 
 <!doctype html>
-<html lang={lang} class="scroll-pt-16 scroll-smooth">
+<html lang={lang} class="scroll-smooth antialiased">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -35,18 +33,38 @@ const ogImgUrl = canonicalURL + socialImage;
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={ogImgUrl} />
-
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={ogImgUrl} />
+    <meta name="theme-color" content="#0ea5e9" />
   </head>
-  <body class="bg-black font-sans">
+
+  <body
+    class="
+      min-h-dvh font-sans text-slate-900 bg-gradient-to-b
+      from-slate-50 via-white to-slate-100
+      dark:text-slate-100 dark:from-[#0b1020] dark:via-[#0e1326] dark:to-[#0b1020]
+      selection:bg-cyan-300/50 dark:selection:bg-cyan-400/30
+    "
+  >
+    <!-- Decorative gradient orbs -->
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-cyan-400/20 blur-3xl dark:bg-cyan-300/15"></div>
+      <div class="absolute -bottom-32 -right-24 h-96 w-96 rounded-full bg-indigo-400/15 blur-3xl dark:bg-indigo-300/10"></div>
+    </div>
+
     <Header siteLogo={siteLogo} navLinks={navLinks} />
-    <main class="mx-auto max-w-3xl px-5">
+
+    <main class="mx-auto w-full max-w-6xl px-5 md:px-8 py-10 md:py-14">
       <slot />
     </main>
+
     <Footer author={author} socialLinks={socialLinks} />
+
+    <!-- Dark mode bootstrapping -->
+    <script is:inline>
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
   </body>
 </html>

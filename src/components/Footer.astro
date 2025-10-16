@@ -1,33 +1,14 @@
 ---
-import type { SiteConfig } from "@types";
-
-type Props = Pick<SiteConfig, "author" | "socialLinks">;
-
-const { author, socialLinks } = Astro.props;
-const currentYear = new Date().getFullYear();
+const { author, socialLinks = [] } = Astro.props;
 ---
 
-<footer
-  class="w-full border-t border-neutral/20 px-5 pt-5 pb-8 text-center text-white"
->
-  <ul class="mb-5 flex flex-wrap justify-center gap-x-5 text-xs">
-    {
-      socialLinks.map(({ text, href }) => (
-        <li>
-          <a
-            href={href}
-            target="_blank"
-            class="inline-block px-4 py-3 after:relative after:bottom-[-4px] after:content-[url(/external.svg)] hover:text-primary"
-          >
-            {text}
-          </a>
-        </li>
-      ))
-    }
-  </ul>
-  <p class="text-xs">
-    {author} © {currentYear}. <span class="text-neutral"
-      >Designed & Developed by</span
-    > Moisés Machuca
-  </p>
+<footer class="border-t border-white/60 dark:border-white/10 py-8 mt-16">
+  <div class="mx-auto flex max-w-6xl flex-col items-center gap-3 px-5 md:px-8 text-sm text-slate-500">
+    <div class="flex gap-4">
+      {socialLinks.map((s) => (
+        <a href={s.href} target="_blank" class="hover:text-slate-700 dark:hover:text-slate-300 transition">{s.text}</a>
+      ))}
+    </div>
+    <div>© {new Date().getFullYear()} {author}. All rights reserved.</div>
+  </div>
 </footer>

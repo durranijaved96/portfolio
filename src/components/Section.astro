@@ -1,17 +1,13 @@
 ---
-interface Props {
-  text: string;
-  href: string;
-}
-
 const { text, href } = Astro.props;
 ---
 
-<section id={href} class="py-24">
-  <h2
-    class="mb-14 font-serif text-4xl font-bold tracking-tighter text-white md:text-5xl"
-  >
-    {text}
-  </h2>
-  <slot />
+<section id={href} class="mx-auto max-w-6xl py-10 md:py-14">
+  <div class="mb-6 flex items-center justify-between">
+    <h2 class="text-xl md:text-2xl font-semibold tracking-tight">{text}</h2>
+    <a href={`#${href}`} class="text-sm text-slate-500 dark:text-slate-400 hover:underline">#</a>
+  </div>
+  <div class="grid gap-5 md:gap-6">
+    <slot />
+  </div>
 </section>

@@ -1,35 +1,61 @@
-# AstroZen - Personal Portfolio Website
+Waqas Durrani — Professional Frontend Portfolio
 
-AstroZen is a minimalist, accessible and responsive portfolio template for your personal portfolio website. It is built with Astro and TailwindCSS.
+A sleek, modern, and responsive portfolio website showcasing my 10+ years of experience as a Senior Frontend Developer.
+Built using Astro and TailwindCSS, it demonstrates clean UI architecture, performance optimization, and attention to design detail.
 
-![zen-og](https://github.com/user-attachments/assets/7a72aaae-6652-4cd0-becc-8e6a3c224993)
+🔥 Features
 
-> [!NOTE]
-> The information contained in this template, including names, images, and content, is entirely fictitious and is intended solely to give the design a realistic appearance. Any coincidence with real-life people, events, or situations is purely coincidental. It is recommended that you replace this information with your own information.
+🚀 Built with Astro + TailwindCSS
 
-## 🔥 Features
+💎 Clean, professional, and minimalist design
 
-- [x] Minimalist design. clean and simple
-- [x] Mobile-first responsive layout
-- [x] SEO-friendly and accessible
-- [x] Easy to customize with a single configuration file
+📱 Fully responsive (mobile-first)
 
-## ✅ Lighthouse Score
+⚡ Optimized for SEO and accessibility
 
-![performance](https://github.com/user-attachments/assets/4f95e2ca-03f9-4996-9e34-dcd179194c58)
+🧩 Easy to customize using a single configuration file (src/config/index.ts)
 
-## 🚀 Getting Started
+🎨 Light / Dark mode toggle
 
-Clone this repository to your local machine using Git.
+☁️ Ready for instant deployment on Vercel
 
-```scheme
-git clone https://github.com/immois/astro-zen.git
-cd astro-zen
-```
+✅ Performance
 
-| Command        | Action                                       |
-| :------------- | :------------------------------------------- |
-| `pnpm install` | Installs dependencies                        |
-| `pnpm dev`     | Starts local dev server at `localhost:4321`  |
-| `pnpm build`   | Build your production site to `./dist/`      |
-| `pnpm preview` | Preview your build locally, before deploying |
+Tested using Google Lighthouse — fast, responsive, and accessible.
+
+🧭 Getting Started
+
+Clone this repository and start your development server:
+
+git clone https://github.com/durranijaved96/portfolio.git
+cd portfolio
+npm install
+npm run dev
+
+Command	Description
+npm install	Installs all dependencies
+npm run dev	Starts local dev server at localhost:4321
+npm run build	Builds the production site into ./dist/
+npm run preview	Previews your build locally before deploying
+👨‍💻 About
+
+Hi, I’m Waqas Javed Durrani, a Senior Frontend Developer based in Munich, Germany.
+I specialize in React, TypeScript, Next.js, and Astro, focusing on building AI-powered SaaS platforms, clean UI systems, and high-performance dashboards.
+
+📧 Email: waqasdurrani29@gmail.com
+
+🔗 LinkedIn: linkedin.com/in/waqas-javed-durrani-aa3b34102
+
+💻 GitHub: github.com/durranijaved96
+
+🧱 Tech Stack
+
+Astro (framework)
+
+TailwindCSS (styling)
+
+TypeScript
+
+Vercel (deployment)
+
+Storybook / React / Next.js (project experience)
