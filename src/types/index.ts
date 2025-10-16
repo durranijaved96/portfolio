@@ -47,3 +47,12 @@ export interface HeaderProps {
   siteLogo: string;
   navLinks: { text: string; href: string }[];
 }
+// 🔹 Footer Section
+export interface NavLink {
+  text: string;
+  href: string;
+}
+export interface FooterProps {
+  author: string;
+  socialLinks: NavLink[];
+}

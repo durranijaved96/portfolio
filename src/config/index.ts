@@ -92,7 +92,7 @@ export const SITE_CONTENT: SiteContent = {
   ],
   about: {
     description: `
-      I build AI-powered SaaS products: performant React UIs, emissions/ESG dashboards, onboarding flows, LLM chatbots, and design systems. 10+ years in Germany; startup-speed with enterprise quality.
+      I build AI-powered SaaS products: performant React UIs, emissions/ESG dashboards, onboarding flows, LLM chatbots, and design systems. 10+ years in Germany, startup-speed with enterprise quality.
     `,
     image: "/Waqas.jpeg",
   },

@@ -1,25 +1,22 @@
 ---
 import Section from "./Section.astro";
-const { experience = [] } = Astro.props;
----
+import type { ExperienceProps } from "@types";
 
+const { experience = [] } = Astro.props as { experience: ExperienceProps[] };
+---
 <Section text="Experience" href="experience">
   <div class="grid gap-6">
-    {experience.map((job) => (
+    {experience.map((job: ExperienceProps) => (
       <article
-        class="
-          group relative overflow-hidden rounded-2xl
-          border border-slate-200/60 dark:border-white/10
-          bg-gradient-to-br from-white/90 to-slate-50/50
-          dark:from-white/[0.06] dark:to-white/[0.02]
-          backdrop-blur-md
-          shadow-sm hover:shadow-xl
-          transition-all duration-300 ease-out
-          hover:-translate-y-1
-          ring-1 ring-transparent hover:ring-cyan-400/40 dark:hover:ring-cyan-300/30
-        "
+        class="group relative overflow-hidden rounded-2xl
+               border border-slate-200/60 dark:border-white/10
+               bg-gradient-to-br from-white/90 to-slate-50/50
+               dark:from-white/[0.06] dark:to-white/[0.02]
+               backdrop-blur-md shadow-sm hover:shadow-xl
+               transition-all duration-300 ease-out
+               hover:-translate-y-1
+               ring-1 ring-transparent hover:ring-cyan-400/40 dark:hover:ring-cyan-300/30"
       >
-        <!-- Subtle gradient accent bar -->
         <div class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-cyan-500 via-blue-500 to-indigo-500 opacity-80"></div>
 
         <div class="relative z-10 p-6">
@@ -34,7 +31,7 @@ const { experience = [] } = Astro.props;
 
           {Array.isArray(job.summary) ? (
             <ul class="mt-4 list-disc pl-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
-              {job.summary.map((s) => (
+              {job.summary.map((s: string) => (
                 <li class="leading-snug">{s}</li>
               ))}
             </ul>

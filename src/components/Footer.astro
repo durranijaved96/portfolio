@@ -1,14 +1,16 @@
 ---
-const { author, socialLinks = [] } = Astro.props;
----
+import type { FooterProps } from "@types";
 
-<footer class="border-t border-white/60 dark:border-white/10 py-8 mt-16">
+const { author, socialLinks = [] } = Astro.props as FooterProps;
+---
+<footer class="border-t border-white/60 dark:border-white/10 py-8 mt-20 relative before:absolute before:top-0 before:left-0 before:w-full before:h-[1px] before:bg-gradient-to-r before:from-cyan-400/40 before:to-indigo-400/40">
   <div class="mx-auto flex max-w-6xl flex-col items-center gap-3 px-5 md:px-8 text-sm text-slate-500">
     <div class="flex gap-4">
-      {socialLinks.map((s) => (
+      {socialLinks.map((s: { text: string; href: string }) => (
         <a href={s.href} target="_blank" class="hover:text-slate-700 dark:hover:text-slate-300 transition">{s.text}</a>
       ))}
     </div>
     <div>© {new Date().getFullYear()} {author}. All rights reserved.</div>
+    <div class="text-xs text-slate-500 dark:text-slate-400">Crafted with Astro + Tailwind • Deployed on Vercel</div>
   </div>
 </footer>

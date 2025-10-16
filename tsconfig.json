@@ -8,6 +8,7 @@
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@icons/*": ["src/icons/*"],
+      "@/*": ["src/*"],
       "@types": ["src/types/index.ts"],
       "@config": ["src/config/index.ts"]
     }
