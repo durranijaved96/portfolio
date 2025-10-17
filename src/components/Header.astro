@@ -1,52 +1,127 @@
 ---
-import type { HeaderProps } from "@types"; 
-
+import type { HeaderProps } from "@types";
 const { siteLogo, navLinks = [] } = Astro.props as HeaderProps;
 ---
+
 <header
-  class="sticky top-0 z-40 backdrop-blur-md supports-[backdrop-filter]:bg-white/60
-         dark:supports-[backdrop-filter]:bg-black/30 border-b border-white/40 dark:border-white/10"
+  class="sticky top-0 z-40 border-b border-black/5 dark:border-white/10
+         backdrop-blur-md supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-black/30"
 >
-  <div class="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-5 md:px-8">
-    <a href="/" class="flex items-center gap-3">
-      <img src={siteLogo} alt="Logo" class="h-9 w-9 rounded-full ring-1 ring-black/10 dark:ring-white/10" />
-      <span class="text-sm md:text-base font-semibold tracking-tight">Waqas Javed Durrani</span>
+  <div class="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-5 md:px-8">
+    <!-- Brand -->
+    <a href="/" class="flex items-center gap-3 min-w-0">
+      <img src={siteLogo} alt="Logo" class="h-9 w-9 shrink-0 rounded-full ring-1 ring-black/10 dark:ring-white/10" />
+      <span class="truncate text-sm sm:text-base font-semibold tracking-tight">Waqas Javed Durrani</span>
     </a>
 
+    <!-- Desktop nav -->
     <nav class="hidden md:flex items-center gap-6 text-sm">
-      {navLinks.map((l: { text: string; href: string }) => (
-        <a href={l.href} class="hover:text-slate-600 dark:hover:text-slate-300 transition-colors">
+      {navLinks.map((l) => (
+        <a href={l.href} class="px-1 py-0.5 hover:text-slate-700 dark:hover:text-slate-200 transition-colors">
           {l.text}
         </a>
       ))}
-      <button
-        class="rounded-full border border-black/10 dark:border-white/10 px-3 py-1 text-sm hover:bg-black/5 dark:hover:bg-white/10 transition"
-        onclick="(() => { const html=document.documentElement; const isDark=html.classList.toggle('dark'); localStorage.setItem('theme', isDark?'dark':'light'); })()"
-        aria-label="Toggle theme"
-      >
-        <span class="dark:hidden">🌙</span>
-        <span class="hidden dark:inline">☀️</span>
-      </button>
     </nav>
 
-    <details class="md:hidden">
-      <summary class="list-none flex items-center gap-3 rounded-full border px-3 py-1 text-sm border-black/10 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/10 cursor-pointer">
-        Menu
-      </summary>
-      <div class="mt-3 rounded-2xl border border-black/10 dark:border-white/10 bg-white/80 dark:bg-black/40 backdrop-blur-md p-2 shadow-xl">
-        {navLinks.map((l: { text: string; href: string }) => (
-          <a href={l.href} class="block rounded-lg px-3 py-2 text-sm hover:bg-black/5 dark:hover:bg-white/10">
+    <!-- Mobile menu button -->
+    <button
+      id="menu-button"
+      type="button"
+      class="md:hidden inline-flex items-center justify-center rounded-lg border border-black/10 dark:border-white/10 px-2.5 py-2 text-sm hover:bg-black/5 dark:hover:bg-white/10 transition"
+      aria-label="Open menu"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+    >
+      <!-- simple hamburger / close -->
+      <span id="menu-icon" aria-hidden="true">☰</span>
+    </button>
+  </div>
+
+  <!-- Mobile popover -->
+  <div
+    id="mobile-menu"
+    class="pointer-events-none fixed inset-0 z-40 md:hidden"
+    aria-hidden="true"
+  >
+    <!-- backdrop (click to close) -->
+    <div id="backdrop" class="hidden h-full w-full bg-black/40"></div>
+
+    <!-- panel -->
+    <div
+      id="panel"
+      class="absolute right-4 top-16 hidden w-[78vw] max-w-xs rounded-2xl border border-black/10 dark:border-white/10
+             bg-white/95 dark:bg-black/50 backdrop-blur-md shadow-2xl
+             will-change-transform will-change-opacity
+             data-[open=false]:opacity-0 data-[open=false]:scale-95
+             data-[open=true]:opacity-100 data-[open=true]:scale-100
+             transition duration-150 ease-out motion-reduce:transition-none"
+      data-open="false"
+    >
+      <nav class="max-h-[60vh] overflow-auto py-1">
+        {navLinks.map((l) => (
+          <a
+            href={l.href}
+            class="block rounded-lg px-4 py-2.5 text-[15px] hover:bg-black/5 dark:hover:bg-white/10"
+          >
             {l.text}
           </a>
         ))}
-        <button
-          class="mt-1 w-full rounded-lg px-3 py-2 text-left text-sm hover:bg-black/5 dark:hover:bg-white/10"
-          onclick="(() => { const html=document.documentElement; const isDark=html.classList.toggle('dark'); localStorage.setItem('theme', isDark?'dark':'light'); })()"
-        >
-          <span class="dark:hidden">🌙 Dark mode</span>
-          <span class="hidden dark:inline">☀️ Light mode</span>
-        </button>
-      </div>
-    </details>
+      </nav>
+    </div>
   </div>
+
+  <!-- interactions -->
+  <script is:inline>
+    (function () {
+      const btn = document.getElementById('menu-button');
+      const icon = document.getElementById('menu-icon');
+      const root = document.getElementById('mobile-menu');
+      const panel = document.getElementById('panel');
+      const backdrop = document.getElementById('backdrop');
+      if (!btn || !panel || !root || !backdrop || !icon) return;
+
+      function setOpen(open) {
+        btn.setAttribute('aria-expanded', String(open));
+        root.style.pointerEvents = open ? 'auto' : 'none';
+
+        // show/hide elements
+        backdrop.classList.toggle('hidden', !open);
+        panel.classList.toggle('hidden', !open);
+
+        // animate panel
+        panel.setAttribute('data-open', open ? 'true' : 'false');
+
+        // icon swap
+        icon.textContent = open ? '✕' : '☰';
+
+        // lock scroll
+        document.body.style.overflow = open ? 'hidden' : '';
+      }
+
+      function isOpen() {
+        return panel.getAttribute('data-open') === 'true';
+      }
+
+      btn.addEventListener('click', () => setOpen(!isOpen()));
+      backdrop.addEventListener('click', () => setOpen(false));
+
+      // close on link click
+      panel.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', () => setOpen(false));
+      });
+
+      // close on Esc
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') setOpen(false);
+      });
+
+      // close on outside click (outside panel but within header area)
+      document.addEventListener('click', (e) => {
+        if (!isOpen()) return;
+        const withinPanel = panel.contains(e.target);
+        const withinButton = btn.contains(e.target);
+        if (!withinPanel && !withinButton) setOpen(false);
+      });
+    })();
+  </script>
 </header>

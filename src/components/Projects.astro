@@ -13,14 +13,24 @@ const { projects = [] } = Astro.props as { projects: ProjectProps[] };
                bg-white/70 dark:bg-white/[0.03] backdrop-blur-md
                p-4 shadow-sm hover:shadow-lg transition"
       >
-        <div class="relative mb-3 aspect-video overflow-hidden rounded-xl ring-1 ring-black/10 dark:ring-white/10">
+        <!--Wrap image in clickable link -->
+        <a
+          href={p.linkPreview || p.linkSource || "#"}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block relative mb-3 aspect-video overflow-hidden rounded-xl ring-1 ring-black/10 dark:ring-white/10"
+        >
           <img
             src={p.image}
             alt={p.name}
             class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
             loading="lazy"
           />
-        </div>
+          <span
+            class="absolute inset-0 bg-black/0 group-hover:bg-black/10 dark:group-hover:bg-white/10 transition"
+            aria-hidden="true"
+          />
+        </a>
 
         <h3 class="font-semibold">{p.name}</h3>
         <p class="mt-1 line-clamp-2 text-sm text-slate-600 dark:text-slate-300">{p.summary}</p>
