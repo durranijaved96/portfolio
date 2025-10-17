@@ -7,11 +7,19 @@ export interface SiteConfig extends HeaderProps {
   socialImage: string;
   canonicalURL?: string;
 }
+export interface DesignProps {
+  name: string;
+  summary?: string;
+  image: string;
+  linkFigma?: string;
+  linkPreview?: string;
+}
 
 export interface SiteContent {
   hero: HeroProps;
   experience: ExperienceProps[];
   projects: ProjectProps[];
+  designs?: DesignProps[];   
   about: AboutProps;
 }
 
@@ -36,6 +44,7 @@ export interface ProjectProps {
   image: string;
   linkPreview?: string;
   linkSource?: string;
+  linkFigma?: string; // optional, if you plan to show a Figma button on project cards
 }
 
 export interface AboutProps {

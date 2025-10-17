@@ -4,58 +4,65 @@ export const SITE_CONFIG: SiteConfig = {
   title: "Waqas Javed Durrani — Senior Frontend Developer",
   author: "Waqas Javed Durrani",
   description:
-    "Software Engineer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
+    "Senior Frontend Engineer based in Munich, Germany. I build high-performance React UIs, ESG/emissions dashboards, onboarding flows, LLM chatbots, and design systems.",
   lang: "en",
   siteLogo: "/Waqas.jpeg",
   navLinks: [
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
+    { text: "Designs", href: "#designs" }, 
     { text: "About", href: "#about" },
   ],
   socialLinks: [
     { text: "LinkedIn", href: "https://www.linkedin.com/in/waqas-javed-durrani-aa3b34102/" },
-    { text: "Github", href: "https://github.com/waqas1739" },
-    { text: "Youtube", href: "https://www.youtube.com/@waqasdurrani9077" },
+    { text: "GitHub", href: "https://github.com/durranijaved96" }, 
+    { text: "YouTube", href: "https://www.youtube.com/@waqasdurrani9077" },
+    { text: "Figma", href: "https://www.figma.com/@waqas39" }, 
   ],
-  socialImage: "/zen-og.png",
-  canonicalURL: "https://astro-zen.vercel.app",
+  socialImage: "/Waqas.jpeg",
+  canonicalURL: "https://portfolio-omega-snowy-94.vercel.app/",
 };
 
 export const SITE_CONTENT: SiteContent = {
   hero: {
     name: "Waqas Javed Durrani",
-    specialty: "Frontend/Full Stack Developer",
+    specialty: "Senior Frontend / Full-Stack Developer",
     summary:
-      "I build AI-powered SaaS products: performant React UIs, emissions/ESG dashboards, onboarding flows, LLM chatbots, and design systems. 10+ years in Germany, startup-speed with enterprise quality.",
+      "As a Lead Senior Frontend Developer with over 10 years of expertise, I specialise in building scalable SaaS solutions and high-performance web and mobile applications enhanced with AI. I build AI-powered SaaS: performant React UIs, emissions/ESG dashboards, onboarding (Joyride), LLM chatbots, and Storybook design systems. 10+ years in Germany, startup speed, enterprise quality.",
     email: "waqasdurrani29@gmail.com",
   },
+
   experience: [
     {
       company: "Envoria GmbH",
       position: "Senior Frontend Developer",
-      startDate: "Sept 2024",
+      startDate: "Sep 2024",
       endDate: "Present",
       summary: [
-        "Redesigned Home dashboard with a widget-based system, improving usability and engagement.",
-        "I led a team of developers in building and integrating new features using Jetpack Android components such as LiveData and ViewModel. This enabled us to build scalable and maintainable applications, reducing the crash rate by 20% and speeding up the time to delivery of new features by 15%.• Launched a new application theme and layouts, delivering a refreshed, user-friendly experienceIntegrated Google Pay for in-app purchases, resulting in a 35% increase in mobile transaction revenue. Additionally, implemented Firebase Analytics to gain insights into user behavior, enabling data-driven optimizations and a 30% increase in user retention.",
-        "Built an interactive onboarding wizard (Joyride) that boosted new-user adoption by 40%.",
-        "Developed overview dashboards for emissions & ESG standards, with collapsible tree views and card-based layouts for better data exploration.",
-        "Developed advanced data visualization components (PieCharts) for clearer sustainability insights.",
-        "Built an attachments management module with multi-file upload & preview.",
-        "Established a Storybook design system for reusable, scalable UI components.",
-        "Developed AI-powered chatbot (Onyx AI) and integrated OpenAPI services.",
-        "Improved developer productivity by introducing CI/CD pipelines (GitHub Actions) and enforcing frontend best practices."
-
+        "Shipped a widget-based Home dashboard; consistent card system and layout grid.",
+        "Built interactive onboarding with react-joyride (guided tours, persisted state).",
+        "Delivered emissions/ESG overview dashboards with collapsible org tree and cards.",
+        "Added advanced data-viz (status PieCharts) and attachments module (multi-file upload).",
+        "Established a Storybook design system; improved UI consistency and dev velocity.",
+        "Integrated AI assistant (Onyx AI) and OpenAI APIs for in-app help.",
+        "Hardened CI/CD with GitHub Actions; enforced linting, type-safety, and PR checks.",
       ],
     },
     {
       company: "elbwire GmbH",
-      position: "Lead Senior Fullstack /Frontend Developer",
+      position: "Lead Senior Full-Stack / Frontend Developer",
       startDate: "May 2023",
-      endDate: "Sept 2024",
+      endDate: "Sep 2024",
       summary: [
-        "I designed and developed a mobile application using Flutter, allowing it to be deployed on both Android and iOS with a single codebase. This reduced development time by 50% and maintenance costs by 30%, facilitating a consistent user experience on both platforms.",
-        "I integrated biometric authentication and data encryption, significantly improving the security of user data. This implementation resulted in a 40% increase in user trust and a 25% reduction in unauthorized access attempts.",
+        "Sole engineer responsible for the SaaS platform’s frontend architecture, design,and development.",
+        "Led frontend architecture in React/TypeScript and develop high-performance, scalable user interfaces, ensuring best practices in responsive design and user experience",
+        "Established and maintained a comprehensive design system, promoting UI consistency and enhancing the overall user experience.",
+        "Implemented and managed CI/CD pipelines using GitHub Actions, facilitating continuous integration and automated deployments to AWS services",
+        "Payment integration via Stripe for subscription based approach",
+        "Contributed to backend with Node.js services to support product workflows.",
+        "Deployed and operated infrastructure on AWS (S3, CloudFront, Route53, Lambda) with SSL certification.",
+        "• Defined and enforced frontend coding standards and best practices to ensure maintainability."
+
       ],
     },
     {
@@ -63,38 +70,93 @@ export const SITE_CONTENT: SiteContent = {
       position: "Lead Frontend Developer",
       startDate: "Oct 2022",
       endDate: "May 2023",
-      summary:
-        "Developed and integrated a real-time vehicle tracking system using WebSockets, improving accuracy and data update in the application. This functionality increased user satisfaction by 30% and reduced customer service inquiries by 25%.",
+      summary: [
+        "Creating design system react components for storybook and delivered components",
+        "Created New UI for the Vernaio SaaS platform",
+        "Led the team of 5 frontend devs for development of Saas app",
+        "Planning resources for prioritsed tasks. Architectural oversight for features being worked on",
+        "Architecting and implementing new features.",
+        " Ensuring code quality, scalability and extensibility.Fixing bugs and identifying ways to reduce the bugs escalated.",
+        " Collaboration with Product, UI/UX and all other teams",
+      ],
     },
   ],
+
   projects: [
     {
       name: "EV Explorer",
-      summary: "Vehicle Listing & Detail App.",
+      summary: "Vehicle listing & detail app with filtering, metrics, and dynamic routing.",
       linkPreview: "https://ev-explorer-rho.vercel.app/",
       linkSource: "https://github.com/durranijaved96/ev-explorer",
       image: "/EV.png",
     },
     {
       name: "React Storybook",
-      summary: "An e-commerce platform that replicates Shopify's key features.",
-      linkPreview: "https://my-react-storybook.vercel.app/?path=/story/introduction-introduction--page",
+      summary: "My design system playground—tokenized components + docs in Storybook.",
+      linkPreview:
+        "https://my-react-storybook.vercel.app/?path=/story/introduction-introduction--page",
       linkSource: "https://github.com/durranijaved96/my-react-storybook",
       image: "/Storybook.png",
     },
     {
       name: "Foodifie UI",
-      summary: "A plateform for making projects and have apple widget system",
+      summary: "Widget-style dashboard UX with clean cards and animations.",
       linkPreview: "https://foodifie.vercel.app/",
       linkSource: "https://github.com/durranijaved96/foodifie",
       image: "/Foodifie.png",
     },
   ],
+
+  //Figma designs section
+  designs: [
+    {
+      name: "Digital Avatars Dashboard UI",
+      summary: "Dashboard view for creating digital AI avatars.You can create avatars and see on dashboard.",
+      image: "/Digital_Avatars.png",
+      linkFigma: "https://www.figma.com/files/team/1395660445958283348/recents-and-sharing?fuid=841727067542136599",
+      linkPreview: "https://www.figma.com/design/U9aYLeOajxwYVFiiOVGH0l/Dashboard-Concept-AI-Avatars?t=xG0pAwEV0ECsNBUe-0",
+    },
+    {
+      name: "Elecromobility App Concept",
+      summary: "Modern concept for an electric mobility mobile app.",
+      image: "/Electromobility_App.png",
+      linkFigma: "https://www.figma.com/design/RckdQ3R7cbfkuUlnJ2NfLc/Electricmobility-app-mobile-view?t=xG0pAwEV0ECsNBUe-0I",
+      linkPreview: "https://www.figma.com/design/RckdQ3R7cbfkuUlnJ2NfLc/Electricmobility-app-mobile-view?t=xG0pAwEV0ECsNBUe-0",
+    },
+    {
+      name: "Hotel Booking Concept App",
+      summary: "Modern concept for user experience in mobile app.",
+      image: "/Hotel_App.png",
+      linkFigma: "https://www.figma.com/design/7ihcJK8OHfU406l0Uabj20/Hotel-Booking---Concept-App?t=xG0pAwEV0ECsNBUe-0",
+      linkPreview: "https://www.figma.com/design/7ihcJK8OHfU406l0Uabj20/Hotel-Booking---Concept-App?t=xG0pAwEV0ECsNBUe-0",
+    },
+    {
+      name: "Augmented Healthcare SPA",
+      summary: "Modern concept for user experience in mobile app.",
+      image: "/AR_Health.png",
+      linkFigma: "https://www.figma.com/design/8gMXfQFUBv9kENvD9diLTb/Augmented-healthcare-Concept?t=xG0pAwEV0ECsNBUe-0",
+      linkPreview: "https://www.figma.com/design/8gMXfQFUBv9kENvD9diLTb/Augmented-healthcare-Concept?t=xG0pAwEV0ECsNBUe-0",
+    },
+    {
+      name: "Food App SPA",
+      summary: "Modern concept for user experience in mobile app.",
+      image: "/Food_App.png",
+      linkFigma: "https://www.figma.com/design/jffobPFEwujpHnjPq6YQa7/Food-APp-Conceptual-landing-page?t=xG0pAwEV0ECsNBUe-0",
+      linkPreview: "https://www.figma.com/design/jffobPFEwujpHnjPq6YQa7/Food-APp-Conceptual-landing-page?t=xG0pAwEV0ECsNBUe-0",
+    },
+    {
+      name: "IIOT Concept App",
+      summary: "Modern concept for user experience in mobile app.",
+      image: "/IIOT.png",
+      linkFigma: "https://www.figma.com/design/qa1UjrWs1pwT7Bn8LCyDOi/IIOT-new-concept?node-id=3-35&p=f&t=xG0pAwEV0ECsNBUe-0",
+      linkPreview: "https://www.figma.com/design/qa1UjrWs1pwT7Bn8LCyDOi/IIOT-new-concept?node-id=3-35&p=f&t=xG0pAwEV0ECsNBUe-0",
+    },
+
+  ],
+
   about: {
-    description: `
-      I build AI-powered SaaS products: performant React UIs, emissions/ESG dashboards, onboarding flows, LLM chatbots, and design systems. 10+ years in Germany, startup-speed with enterprise quality.
-    `,
+    description:
+      "I focus on UI + UX, clean component APIs, design systems, type-safe data flows, and fast UI. I enjoy turning fuzzy product ideas into shippable features with crisp polish.",
     image: "/Waqas.jpeg",
   },
 };
-
