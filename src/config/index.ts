@@ -84,9 +84,9 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       name: "Foodifie UI",
-      summary: "A plateform for making projects and apple widget system",
-      linkPreview: "/",
-      linkSource: "https://github.com/durranijaved96/portfolio.git",
+      summary: "A plateform for making projects and have apple widget system",
+      linkPreview: "https://foodifie.vercel.app/",
+      linkSource: "https://github.com/durranijaved96/foodifie",
       image: "/Foodifie.png",
     },
   ],
