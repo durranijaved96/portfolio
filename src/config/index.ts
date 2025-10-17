@@ -78,16 +78,16 @@ export const SITE_CONTENT: SiteContent = {
     {
       name: "React Storybook",
       summary: "An e-commerce platform that replicates Shopify's key features.",
-      linkPreview: "my-react-storybook.vercel.app",
+      linkPreview: "https://my-react-storybook.vercel.app/?path=/story/introduction-introduction--page",
       linkSource: "https://github.com/durranijaved96/my-react-storybook",
       image: "/Storybook.png",
     },
     {
-      name: "ClonTagram",
-      summary: "A social network that replicates the features of Instagram",
+      name: "Foodifie UI",
+      summary: "A plateform for making projects and apple widget system",
       linkPreview: "/",
       linkSource: "https://github.com/durranijaved96/portfolio.git",
-      image: "/clone-ig.png",
+      image: "/Foodifie.png",
     },
   ],
   about: {
