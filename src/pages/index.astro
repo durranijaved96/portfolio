@@ -4,7 +4,7 @@ import Hero from "@components/Hero.astro";
 import Layout from "@layouts/Layout.astro";
 import Experience from "@components/Experience.astro";
 import Projects from "@components/Projects.astro";
-import Designs from "@components/Designs.astro";  // ⬅️ add this
+import Designs from "@components/Designs.astro";
 import About from "@components/About.astro";
 import "../styles/global.css";
 ---
@@ -13,6 +13,6 @@ import "../styles/global.css";
   <Hero {...SITE_CONTENT.hero} />
   <Experience experience={SITE_CONTENT.experience} />
   <Projects projects={SITE_CONTENT.projects} />
-  <Designs designs={SITE_CONTENT.designs ?? []} />   <!-- ⬅️ add this -->
+  <Designs designs={SITE_CONTENT.designs ?? []} /> 
   <About {...SITE_CONTENT.about} name={SITE_CONTENT.hero.name} />
 </Layout>

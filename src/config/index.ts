@@ -155,8 +155,14 @@ export const SITE_CONTENT: SiteContent = {
   ],
 
   about: {
-    description:
-      "I focus on UI + UX, clean component APIs, design systems, type-safe data flows, and fast UI. I enjoy turning fuzzy product ideas into shippable features with crisp polish.",
+    description: `
+  I am a Senior Frontend Developer passionate about building clean, scalable, and user-focused web applications. Over the past decade, I have worked across e-mobility platforms,ESG, Health care, IoT , Pharma etc , turning complex data and fuzzy product ideas into beautiful, high-performance SaaS experiences.
+  
+  My toolkit includes React, Next.js, and TypeScript, along with a strong design foundation in Figma and Storybook. I love creating design systems that bring consistency, speed, and joy to both users and developers. From interactive dashboards and onboarding flows to AI-powered assistants, my goal is to make interfaces that feel effortless.
+  
+  I believe great software comes from aligning engineering precision with thoughtful design, building UIs that not only work fast, but also look and feel right.
+    `,
     image: "/Waqas.jpeg",
   },
+  
 };
