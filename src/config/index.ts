@@ -92,7 +92,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       name: "React Storybook",
-      summary: "My design system playground—tokenized components + docs in Storybook.",
+      summary: "My design system playground, tokenized components + docs in Storybook.",
       linkPreview:
         "https://my-react-storybook.vercel.app/?path=/story/introduction-introduction--page",
       linkSource: "https://github.com/durranijaved96/my-react-storybook",
@@ -100,7 +100,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       name: "Foodifie UI",
-      summary: "Widget-style dashboard UX with clean cards and animations.",
+      summary: "Email : durranijaved96@gmail.com, Password: Inside12345@#",
       linkPreview: "https://foodifie.vercel.app/",
       linkSource: "https://github.com/durranijaved96/foodifie",
       image: "/Foodifie.png",
