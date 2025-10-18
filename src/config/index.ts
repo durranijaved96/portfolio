@@ -45,7 +45,7 @@ export const SITE_CONTENT: SiteContent = {
         "Added advanced data-viz (status PieCharts) and attachments module (multi-file upload).",
         "Established a Storybook design system; improved UI consistency and dev velocity.",
         "Integrated AI assistant (Onyx AI) and OpenAI APIs for in-app help.",
-        "Hardened CI/CD with GitHub Actions; enforced linting, type-safety, and PR checks.",
+        "Polished CI/CD with GitHub Actions, enforced linting, type-safety, and PR checks.",
       ],
     },
     {
@@ -61,7 +61,7 @@ export const SITE_CONTENT: SiteContent = {
         "Payment integration via Stripe for subscription based approach",
         "Contributed to backend with Node.js services to support product workflows.",
         "Deployed and operated infrastructure on AWS (S3, CloudFront, Route53, Lambda) with SSL certification.",
-        "• Defined and enforced frontend coding standards and best practices to ensure maintainability."
+        "Defined and enforced frontend coding standards and best practices to ensure maintainability."
 
       ],
     },

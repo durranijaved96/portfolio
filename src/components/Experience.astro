@@ -2,46 +2,68 @@
 import Section from "./Section.astro";
 import type { ExperienceProps } from "@types";
 
-const { experience = [] } = Astro.props as { experience: ExperienceProps[] };
+interface Props {
+  experience: ExperienceProps[];
+  linkedinUrl?: string;
+}
+const {
+  experience = [],
+  linkedinUrl = "https://www.linkedin.com/in/waqas-javed-durrani-aa3b34102/",
+} = Astro.props as Props;
+
+// Optional: detect if Vernaio exists (so we only show the banner when relevant)
+const hasVernaio = experience.some((j) => j.company === "Vernaio GmbH");
 ---
+
 <Section text="Experience" href="experience">
-  <div class="grid gap-6">
-    {experience.map((job: ExperienceProps) => (
+  <div class="space-y-6">
+    {experience.map((job) => (
       <article
-        class="group relative overflow-hidden rounded-2xl
-               border border-slate-200/60 dark:border-white/10
-               bg-gradient-to-br from-white/90 to-slate-50/50
-               dark:from-white/[0.06] dark:to-white/[0.02]
-               backdrop-blur-md shadow-sm hover:shadow-xl
-               transition-all duration-300 ease-out
-               hover:-translate-y-1
-               ring-1 ring-transparent hover:ring-cyan-400/40 dark:hover:ring-cyan-300/30"
+        class="rounded-2xl border border-black/10 dark:border-white/10
+               bg-white/70 dark:bg-white/[0.03] backdrop-blur-md p-4 shadow-sm"
       >
-        <div class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-cyan-500 via-blue-500 to-indigo-500 opacity-80"></div>
+        <header class="flex flex-wrap items-baseline justify-between gap-2">
+          <h3 class="font-semibold">{job.company}</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            {job.startDate} — {job.endDate}
+          </p>
+        </header>
+        <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">{job.position}</p>
 
-        <div class="relative z-10 p-6">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <h3 class="font-semibold text-lg">
-              {job.position} • {job.company}
-            </h3>
-            <span class="text-xs text-slate-500 dark:text-slate-400">
-              {job.startDate} — {job.endDate}
-            </span>
-          </div>
-
-          {Array.isArray(job.summary) ? (
-            <ul class="mt-4 list-disc pl-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
-              {job.summary.map((s: string) => (
-                <li class="leading-snug">{s}</li>
-              ))}
-            </ul>
-          ) : (
-            <p class="mt-4 text-sm text-slate-700 dark:text-slate-300 leading-snug">
-              {job.summary}
-            </p>
-          )}
-        </div>
+        {Array.isArray(job.summary) ? (
+          <ul class="mt-3 list-disc pl-5 text-sm text-slate-700 dark:text-slate-300 space-y-1">
+            {job.summary.map((s) => <li>{s}</li>)}
+          </ul>
+        ) : (
+          <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">{job.summary}</p>
+        )}
       </article>
     ))}
   </div>
+
+  {/* ⬇Separate banner outside the Vernaio card */}
+  {hasVernaio && linkedinUrl && (
+    <div
+      class="mt-6 rounded-2xl border border-black/10 dark:border-white/10
+             bg-white/80 dark:bg-white/[0.04] backdrop-blur-md
+             shadow-sm"
+      role="complementary"
+      aria-label="More experience"
+    >
+      <a
+        href={linkedinUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center justify-center gap-2 px-4 py-3 text-sm
+               hover:bg-black/5 dark:hover:bg-white/10 rounded-2xl transition"
+        aria-label="View more experience on LinkedIn"
+      >
+        <!-- down chevron -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+        <span class="font-medium">To see more experience from last 10 years, click here to visit my LinkedIn profile</span>
+      </a>
+    </div>
+  )}
 </Section>
