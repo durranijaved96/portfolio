@@ -110,6 +110,13 @@ export const SITE_CONTENT: SiteContent = {
   //Figma designs section
   designs: [
     {
+      name: "Concept Design System",
+      summary: "Design system with components for buttons, forms, cards, modals, and more.",
+      image: "/Design_System.png",
+      linkFigma: "https://www.figma.com/design/NP2QARSM0USnsz9GIwzngI/components?node-id=0-1&p=f&t=Ch3PS4ErbRD9WbY5-0",
+      linkPreview: "https://www.figma.com/design/NP2QARSM0USnsz9GIwzngI/components?node-id=0-1&p=f&t=Ch3PS4ErbRD9WbY5-0",
+    },
+    {
       name: "Digital Avatars Dashboard UI",
       summary: "Dashboard view for creating digital AI avatars.You can create avatars and see on dashboard.",
       image: "/Digital_Avatars.png",
