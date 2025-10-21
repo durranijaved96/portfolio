@@ -11,8 +11,13 @@ import "../styles/global.css";
 
 <Layout>
   <Hero {...SITE_CONTENT.hero} />
-  <Experience experience={SITE_CONTENT.experience} />
-  <Projects projects={SITE_CONTENT.projects} />
-  <Designs designs={SITE_CONTENT.designs ?? []} /> 
-  <About {...SITE_CONTENT.about} name={SITE_CONTENT.hero.name} />
+
+  {/* Slightly compact spacing on long sections, plus anchor offset */}
+  <Experience experience={SITE_CONTENT.experience} class="scroll-mt-20" dense />
+
+  <Projects projects={SITE_CONTENT.projects} class="scroll-mt-20" dense />
+
+  <Designs designs={SITE_CONTENT.designs ?? []} class="scroll-mt-20" dense />
+
+  <About {...SITE_CONTENT.about} name={SITE_CONTENT.hero.name} class="scroll-mt-20" />
 </Layout>

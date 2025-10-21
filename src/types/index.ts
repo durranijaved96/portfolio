@@ -44,8 +44,16 @@ export interface ProjectProps {
   image: string;
   linkPreview?: string;
   linkSource?: string;
-  linkFigma?: string; // optional, if you plan to show a Figma button on project cards
+  linkFigma?: string;
+
+  //  New optional fields
+  tech?: string[];          // e.g., ["Next.js", "TypeScript", "Tailwind", "Vercel"]
+  impact?: string[];       
+  role?: string;            
+  year?: string;            
+  linkCaseStudy?: string;    
 }
+
 
 export interface AboutProps {
   description: string;

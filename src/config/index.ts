@@ -85,28 +85,33 @@ export const SITE_CONTENT: SiteContent = {
   projects: [
     {
       name: "EV Explorer",
-      summary: "Vehicle listing & detail app with filtering, metrics, and dynamic routing.",
+      summary: "Vehicle listing & detail app with filters, metrics, and dynamic routing.",
       linkPreview: "https://ev-explorer-rho.vercel.app/",
       linkSource: "https://github.com/durranijaved96/ev-explorer",
       image: "/EV.png",
+      tech: ["Next.js", "TypeScript", "Tailwind", "Vercel", "Driver.js"],  
+      impact: ["Vehicle Search", "Filter latency <50ms", "SSG per vehicle"],  
     },
     {
       name: "React Storybook",
-      summary: "My design system playground, tokenized components + docs in Storybook.",
-      linkPreview:
-        "https://my-react-storybook.vercel.app/?path=/story/introduction-introduction--page",
+      summary: "Design system playground with tokenized components + docs.",
+      linkPreview: "https://my-react-storybook.vercel.app/?path=/story/introduction-introduction--page",
       linkSource: "https://github.com/durranijaved96/my-react-storybook",
       image: "/Storybook.png",
+      tech: ["React", "Storybook", "Chromatic", "MDX"],
+      impact: ["UI regressions ↓30%", "Docs auto-generated", "Design tokens"],
     },
     {
       name: "Foodifie UI",
-      summary: "Email : durranijaved96@gmail.com, Password: Inside12345@#",
+      summary: "Role-based dashboard UI. (Demo: durranijaved96@gmail.com / Inside12345@#)",
       linkPreview: "https://foodifie.vercel.app/",
       linkSource: "https://github.com/durranijaved96/foodifie",
       image: "/Foodifie.png",
+      tech: ["React", "Typescript", "Supabase", "MUI", "Vercel", "Stripe", "Joyride","MuiX charts"],
+      impact: ["RBAC", "Edge SSR",],
     },
   ],
-
+  
   //Figma designs section
   designs: [
     {

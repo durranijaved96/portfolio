@@ -1,27 +1,39 @@
 ---
 interface Props {
   text: string;
-  href?: string; // used for id + anchor
+  href?: string;
   class?: string;
+  dense?: boolean; // NEW: lets you tighten a specific section if needed
 }
-const { text, href = "", class: className = "" } = Astro.props as Props;
+const {
+  text,
+  href = "",
+  class: className = "",
+  dense = false,
+} = Astro.props as Props;
 ---
 
-<section id={href || undefined} class={`mx-auto max-w-6xl py-10 md:py-14 ${className}`}>
-  <div class="mb-6 flex items-center justify-between">
-    <h2 class="text-xl md:text-2xl font-semibold tracking-tight">{text}</h2>
+<section
+  id={href || undefined}
+  class={`mx-auto max-w-6xl ${dense ? "py-5 md:py-7" : "py-6 md:py-10"} ${className}`}
+>
+  <div
+    class={`${dense ? "mb-3 md:mb-4" : "mb-4 md:mb-5"} flex items-center justify-between`}
+  >
+    <h2 class="text-xl font-semibold tracking-tight md:text-2xl">{text}</h2>
 
-    {href && (
-      <a
-        href={`#${href}`}
-        class="text-sm text-slate-500 dark:text-slate-400 hover:underline"
-        aria-label={`Link to ${text} section`}
-      >
-        #
-      </a>
-    )}
+    {
+      href && (
+        <a
+          href={`#${href}`}
+          class="text-sm text-slate-500 hover:underline dark:text-slate-400"
+          aria-label={`Link to ${text} section`}
+        >
+          #
+        </a>
+      )
+    }
   </div>
 
-  <!-- Let the consumer decide layout (grid, flex, etc.) -->
   <slot />
 </section>
