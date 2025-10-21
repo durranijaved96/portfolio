@@ -5,24 +5,22 @@ interface Props {
   description: string;
   image: string;
   name?: string;
+  class?: string; // allow passing classes from parent
 }
 
-const { description, image, name = "Profile photo" } = Astro.props as Props;
+// ✅ alias `class` → `className`
+const { description, image, name = "Profile photo", class: className = "" } = Astro.props as Props;
 ---
 
-<Section text="About" href="about">
-  <div
-    class="grid gap-6 md:grid-cols-[minmax(0,1fr),280px] md:items-start md:gap-8"
-  >
+<!-- ✅ forward className down so spacing/scroll-mt etc. works -->
+<Section text="About" href="about" class={className}>
+  <div class="grid gap-6 md:grid-cols-[minmax(0,1fr),280px] md:items-start md:gap-8">
     <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300">
       {description}
     </p>
 
     <div class="justify-self-center md:justify-self-end">
-      <!-- Polished image card: fully rounded, overflow-hidden, subtle ring & shadow -->
-      <div
-        class="h-72 w-56 overflow-hidden rounded-2xl bg-white/80 shadow-lg ring-1 ring-black/10 dark:bg-white/[0.04] dark:ring-white/10"
-      >
+      <div class="h-72 w-56 overflow-hidden rounded-2xl bg-white/80 shadow-lg ring-1 ring-black/10 dark:bg-white/[0.04] dark:ring-white/10">
         <img
           src={image}
           alt={name}

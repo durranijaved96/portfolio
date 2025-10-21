@@ -28,7 +28,7 @@ export const SITE_CONTENT: SiteContent = {
     name: "Waqas Javed Durrani",
     specialty: "Senior Frontend / Full-Stack Developer",
     summary:
-      "As a Lead Senior Frontend Developer with over 10 years of expertise, I specialise in building scalable SaaS solutions and high-performance web and mobile applications enhanced with AI. I build AI-powered SaaS: performant React UIs, emissions/ESG dashboards, onboarding (Joyride), LLM chatbots, and Storybook design systems. 10+ years in Germany, startup speed, enterprise quality.",
+      "As a Lead Senior Frontend Developer with over 10 years of expertise, I specialise in building scalable SaaS solutions and high-performance web and mobile applications enhanced with AI. I build AI-powered SaaS, performant React UIs, emissions/ESG dashboards, onboarding (Joyride), LLM chatbots, and Storybook design systems. 10+ years in Germany, startup speed, enterprise quality.",
     email: "waqasdurrani29@gmail.com",
   },
 
