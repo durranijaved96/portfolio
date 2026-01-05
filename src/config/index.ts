@@ -110,6 +110,14 @@ export const SITE_CONTENT: SiteContent = {
       tech: ["React", "Typescript", "Supabase", "MUI", "Vercel", "Stripe", "Joyride","MuiX charts"],
       impact: ["RBAC", "Edge SSR",],
     },
+    {
+      name: "ClimateWise",
+      summary: "Climate impact & emissions dashboard for orgs.",
+      linkPreview: "https://climate-wise-552b0ab8.base44.app/",
+      image: "/ClimateWise.png",
+      tech: ["React", "Typescript", "MUI", "base44","MuiX charts"],
+      impact: ["Climate", "Emissions",],
+    },
   ],
   
   //Figma designs section
