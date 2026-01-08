@@ -118,6 +118,14 @@ export const SITE_CONTENT: SiteContent = {
       tech: ["React", "Typescript", "MUI", "base44","MuiX charts"],
       impact: ["Climate", "Emissions",],
     },
+    {
+      name: "EcoFlowAI",
+      summary: "Renewable, Solar optimization with AI",
+      linkPreview: "https://eco-flow-ai-3e3f28eb.base44.app/",
+      image: "/EcoFlowAI.png",
+      tech: ["React", "Typescript", "MUI", "base44","MuiX charts"],
+      impact: ["Renewable Energy", "Solar",],
+    },
   ],
   
   //Figma designs section
