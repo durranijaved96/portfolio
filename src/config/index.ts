@@ -93,6 +93,15 @@ export const SITE_CONTENT: SiteContent = {
       impact: ["Vehicle Search", "Filter latency <50ms", "SSG per vehicle"],  
     },
     {
+      name: "MediBett",
+      summary: "Find & book hospital beds in real-time during emergencies.",
+      linkPreview: "https://medi-bett-b3752909.base44.app/",
+      
+      image: "/MediBett.png",
+      tech: ["React", "MUIX charts", "MDX"],
+      impact: ["Real-time bed availability", "Emergency response" ],
+    },
+    {
       name: "React Storybook",
       summary: "Design system playground with tokenized components + docs.",
       linkPreview: "https://my-react-storybook.vercel.app/?path=/story/introduction-introduction--page",
