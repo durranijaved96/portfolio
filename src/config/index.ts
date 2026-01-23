@@ -98,7 +98,7 @@ export const SITE_CONTENT: SiteContent = {
       linkPreview: "https://medi-bett-b3752909.base44.app/",
       
       image: "/MediBett.png",
-      tech: ["React", "MUIX charts", "MDX"],
+      tech: ["React", "MUIX charts", "MDX","LLMs", "AI Optimization"],
       impact: ["Real-time bed availability", "Emergency response" ],
     },
     {
@@ -124,7 +124,7 @@ export const SITE_CONTENT: SiteContent = {
       summary: "Climate impact & emissions dashboard for orgs.",
       linkPreview: "https://climate-wise-552b0ab8.base44.app/",
       image: "/ClimateWise.png",
-      tech: ["React", "Typescript", "MUI", "base44","MuiX charts"],
+      tech: ["React", "Typescript", "MUI", "AI Optimizer", "MuiX charts"],
       impact: ["Climate", "Emissions",],
     },
     {
@@ -132,7 +132,7 @@ export const SITE_CONTENT: SiteContent = {
       summary: "Renewable, Solar optimization with AI",
       linkPreview: "https://eco-flow-ai-3e3f28eb.base44.app/",
       image: "/EcoFlowAI.png",
-      tech: ["React", "Typescript", "MUI", "base44","MuiX charts"],
+      tech: ["React", "Typescript", "MUI", "AI Chatbot","MuiX charts"],
       impact: ["Renewable Energy", "Solar",],
     },
   ],
