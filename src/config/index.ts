@@ -92,6 +92,15 @@ export const SITE_CONTENT: SiteContent = {
       tech: ["Next.js", "TypeScript", "Tailwind", "Vercel", "Driver.js"],  
       impact: ["Vehicle Search", "Filter latency <50ms", "SSG per vehicle"],  
     },
+     {
+      name: "Employee Time Tracker",
+      summary: "Track employee working hours and generate reports.",
+      linkPreview: "https://employee-time-tracker-rd11.vercel.app/",
+      linkSource: "https://github.com/durranijaved96/employee-time-tracker",
+      image: "/Employee_Tracker.png",
+      tech: ["TypeScript", "Tailwind", "Vercel", "React"],  
+      impact: ["Employee Search", "Shift Management", "Report Generation"],  
+    },
     {
       name: "MediBett",
       summary: "Find & book hospital beds in real-time during emergencies.",
