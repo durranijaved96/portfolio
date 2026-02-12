@@ -93,6 +93,14 @@ export const SITE_CONTENT: SiteContent = {
       impact: ["Vehicle Search", "Filter latency <50ms", "SSG per vehicle"],  
     },
      {
+      name: "Opti Grid",
+      summary: "Energy grid optimization dashboard with AI insights and data visualization.",
+      linkPreview: "https://opti-grid-now.base44.app/",
+      image: "/OptiGrid.png",
+      tech: ["React","TypeScript","Chart.js", "LLMs", "AI Optimization"],
+      impact: ["Grid Efficiency", "Renewable Integration", "Cost Savings"],
+    },
+     {
       name: "Employee Time Tracker",
       summary: "Track employee working hours and generate reports.",
       linkPreview: "https://employee-time-tracker-rd11.vercel.app/",
@@ -105,7 +113,6 @@ export const SITE_CONTENT: SiteContent = {
       name: "MediBett",
       summary: "Find & book hospital beds in real-time during emergencies.",
       linkPreview: "https://medi-bett-b3752909.base44.app/",
-      
       image: "/MediBett.png",
       tech: ["React", "MUIX charts", "MDX","LLMs", "AI Optimization"],
       impact: ["Real-time bed availability", "Emergency response" ],
