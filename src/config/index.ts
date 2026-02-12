@@ -96,7 +96,7 @@ export const SITE_CONTENT: SiteContent = {
       name: "Opti Grid",
       summary: "Energy grid optimization dashboard with AI insights and data visualization.",
       linkPreview: "https://opti-grid-now.base44.app/",
-      image: "/OptiGrid.png",
+      image: "/Opti_Grid.png",
       tech: ["React","TypeScript","Chart.js", "LLMs", "AI Optimization"],
       impact: ["Grid Efficiency", "Renewable Integration", "Cost Savings"],
     },
