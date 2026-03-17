@@ -100,6 +100,14 @@ export const SITE_CONTENT: SiteContent = {
       tech: ["React","TypeScript","Chart.js", "LLMs", "AI Optimization"],
       impact: ["Grid Efficiency", "Renewable Integration", "Cost Savings"],
     },
+       {
+      name: "Workshop Pro Dashboard",
+      summary: "Dashboard for workshop product with AI insights and data visualization.",
+      linkPreview: "https://nippy-path-finder-pro.base44.app/Dashboard",
+      image: "/WorkshopPro.png",
+      tech: ["React","TypeScript","Chart.js", "LLMs", "AI Optimization"],
+      impact: ["Operational Efficiency", "Data-Driven Insights", "User Engagement","Fleet Management"],
+    },
      {
       name: "Employee Time Tracker",
       summary: "Track employee working hours and generate reports.",
