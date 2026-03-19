@@ -83,6 +83,16 @@ export const SITE_CONTENT: SiteContent = {
   ],
 
   projects: [
+  
+    {
+      name: "Lex AI Flow",
+      summary: "AI-powered legal workflow builder for automating tasks with LLMs and APIs.",
+      linkPreview: " https://attentive-lex-ai-flow.base44.app",
+   
+      image: "/lex-ai.png",
+      tech: ["React", "TypeScript", "MUI", "LLMs", "AI Optimization"],  
+      impact: ["Legal Workflow Automation", "LLM Task Orchestration", "API Integrations"],  
+    },
     {
       name: "EV Explorer",
       summary: "Vehicle listing & detail app with filters, metrics, and dynamic routing.",
